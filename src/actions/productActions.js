@@ -36,6 +36,11 @@ export const getProduct = id => async (dispatch) => {
     try {  
         dispatch(productRequest()) 
         const { data }  =  await axios.get(`https://easybuy-be.onrender.com/api/v1/product/${id}`);
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
         dispatch(productSuccess(data))
     } catch (error) {
         //handle error
@@ -54,6 +59,11 @@ export const createReview = reviewData => async (dispatch) => {
             }
         }
         const { data }  =  await axios.put(`https://easybuy-be.onrender.com/api/v1/review`,reviewData, config);
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
         dispatch(createReviewSuccess(data))
     } catch (error) {
         //handle error
@@ -67,6 +77,11 @@ export const getAdminProducts  =  async (dispatch) => {
     try {  
         dispatch(adminProductsRequest()) 
         const { data }  =  await axios.get(`https://easybuy-be.onrender.com/api/v1/admin/products`);
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
         dispatch(adminProductsSuccess(data))
     } catch (error) {
         //handle error
@@ -80,6 +95,11 @@ export const createNewProduct  =  productData => async (dispatch) => {
     try {  
         dispatch(newProductRequest()) 
         const { data }  =  await axios.post(`https://easybuy-be.onrender.com/api/v1/admin/product/new`, productData);
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
         dispatch(newProductSuccess(data))
     } catch (error) {
         //handle error
@@ -93,6 +113,11 @@ export const deleteProduct  =  id => async (dispatch) => {
     try {  
         dispatch(deleteProductRequest()) 
         await axios.delete(`https://easybuy-be.onrender.com/api/v1/admin/product/${id}`);
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
         dispatch(deleteProductSuccess())
     } catch (error) {
         //handle error
@@ -106,6 +131,12 @@ export const updateProduct  =  (id, productData) => async (dispatch) => {
     try {  
         dispatch(updateProductRequest()) 
         const { data }  =  await axios.put(`https://easybuy-be.onrender.com/api/v1/admin/product/${id}`, productData);
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
+        
         dispatch(updateProductSuccess(data))
     } catch (error) {
         //handle error
@@ -120,6 +151,11 @@ export const getReviews =  id => async (dispatch) => {
     try {  
         dispatch(reviewsRequest()) 
         const { data }  =  await axios.get(`https://easybuy-be.onrender.com/api/v1/admin/reviews`,{params: {id}});
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
         dispatch(reviewsSuccess(data))
     } catch (error) {
         //handle error
@@ -133,6 +169,11 @@ export const deleteReview =  (productId, id) => async (dispatch) => {
     try {  
         dispatch(deleteReviewRequest()) 
         await axios.delete(`https://easybuy-be.onrender.com/api/v1/admin/review`,{params: {productId, id}});
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
         dispatch(deleteReviewSuccess())
     } catch (error) {
         //handle error
