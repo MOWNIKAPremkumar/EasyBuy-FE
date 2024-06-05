@@ -57,8 +57,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
                         <input
                             type="password"
                             id="password_field"
-                            className="form-control"
+                            className="form-control"                            
                             value={password}
+                            autocomplete="current-password"
                             onChange={e =>setPassword(e.target.value)}
                         />
                         </div>
