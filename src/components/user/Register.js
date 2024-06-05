@@ -62,7 +62,7 @@ export default function Register() {
     return (
         <div className="row wrapper">
             <div className="col-10 col-lg-5">
-            <form onSubmit={submitHandler} className="shadow-lg" encType='multipart/form-data'>
+            <form onClick={submitHandler} className="shadow-lg" encType='multipart/form-data'>
                 <h1 className="mb-3">Register</h1>
 
             <div className="form-group">
@@ -126,7 +126,7 @@ export default function Register() {
                 type="submit"
                 className="btn btn-block py-3"
                 //disabled={loading}
-                onSubmit={submitHandler}
+                onClick={submitHandler}
                 >
                 REGISTER
                 </button>
