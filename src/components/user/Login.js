@@ -70,7 +70,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
                         id="login_button"
                         type="submit"
                         className="btn btn-block py-3"
-                        disabled={loading}
+                        //disabled={loading}
                         >
                         LOGIN
                         </button>
