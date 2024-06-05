@@ -42,7 +42,7 @@ export default function UpdatePassword() {
     return (
         <div className="row wrapper">
             <div className="col-10 col-lg-5">
-                <form onSubmit={submitHandler} className="shadow-lg">
+                <form onClick={submitHandler} className="shadow-lg">
                     <h1 className="mt-2 mb-5">Update Password</h1>
                     <div className="form-group">
                         <label htmlFor="old_password_field">Old Password</label>
@@ -66,7 +66,7 @@ export default function UpdatePassword() {
                         />
                     </div>
 
-                    <button type="submit"  className="btn update-btn btn-block mt-4 mb-3">Update Password</button>
+                    <button type="submit"  className="btn update-btn btn-block mt-4 mb-3" onClick={submitHandler}>Update Password</button>
                 </form>
             </div>
         </div>

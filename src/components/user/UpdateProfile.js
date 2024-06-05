@@ -66,7 +66,7 @@ export default function UpdateProfile () {
     return (  
     <div className="row wrapper">
         <div className="col-10 col-lg-5">
-            <form onSubmit={submitHandler} className="shadow-lg" encType='multipart/form-data'>
+            <form onClick={submitHandler} className="shadow-lg" encType='multipart/form-data'>
                 <h1 className="mt-2 mb-5">Update Profile</h1>
 
                 <div className="form-group">
@@ -120,7 +120,7 @@ export default function UpdateProfile () {
                     </div>
                 </div>
 
-                <button type="submit" className="btn update-btn btn-block mt-4 mb-3" >Update</button>
+                <button type="submit" className="btn update-btn btn-block mt-4 mb-3" onClick={submitHandler}>Update</button>
             </form>
         </div>
     </div>)

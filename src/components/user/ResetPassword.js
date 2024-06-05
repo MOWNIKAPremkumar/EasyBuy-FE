@@ -44,7 +44,7 @@ export default function ResetPassword() {
     return (
         <div className="row wrapper">
             <div className="col-10 col-lg-5">
-                <form onSubmit={submitHandler} className="shadow-lg">
+                <form onClick={submitHandler} className="shadow-lg">
                     <h1 className="mb-3">New Password</h1>
 
                     <div className="form-group">
@@ -72,7 +72,8 @@ export default function ResetPassword() {
                     <button
                         id="new_password_button"
                         type="submit"
-                        className="btn btn-block py-3">
+                        className="btn btn-block py-3"
+                        onClick={submitHandler}>
                         Set Password
                     </button>
 
