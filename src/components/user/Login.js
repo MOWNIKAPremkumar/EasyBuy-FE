@@ -39,7 +39,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
             <MetaData title={`Login`} />
             <div className="row wrapper"> 
                 <div className="col-10 col-lg-5">
-                    <form onSubmit={submitHandler} className="shadow-lg">
+                    <form onClick={submitHandler} className="shadow-lg">
                         <h1 className="mb-3">Login</h1>
                         <div className="form-group">
                         <label htmlFor="email_field">Email</label>
@@ -71,6 +71,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
                         type="submit"
                         className="btn btn-block py-3"
                         //disabled={loading}
+                        onClick={submitHandler}
                         >
                         LOGIN
                         </button>
