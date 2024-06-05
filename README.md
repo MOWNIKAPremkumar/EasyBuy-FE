@@ -13,7 +13,7 @@ Welcome to the EasyBuy E-Commerce website! This project is built using the MERN 
 - **Shopping Cart**: Users can add products to their cart, review them, and proceed to checkout.
 
 - **Product Reviews**: Users can leave reviews and ratings for products they have purchased, providing valuable feedback to other users.
-- 
+
 - **Admin Dashboard**: Admin users have access to a special dashboard where they can manage products, orders, users, and inventory. This includes adding, updating, and deleting products, orders, and users, as well as monitoring the number of out-of-stock products.
 
 
