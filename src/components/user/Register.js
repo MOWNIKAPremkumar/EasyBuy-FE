@@ -126,7 +126,7 @@ export default function Register() {
                 type="submit"
                 className="btn btn-block py-3"
                 //disabled={loading}
-                onClick={submitHandler}
+                onSubmit={submitHandler}
                 >
                 REGISTER
                 </button>
